@@ -1,4 +1,8 @@
 .status-bar {
+    position: fixed;
+    top: 0; /*top: 0; 이 없으면 status bar가 아래로 내려온다,, 왜? -> 설정 안해주면 브라우저가 결정하기 때문! */
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     padding: 5px 3px;

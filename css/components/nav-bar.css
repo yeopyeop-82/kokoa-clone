@@ -1,0 +1,35 @@
+.nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f9f9fa;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(121, 121, 121, 0.3)
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__link {
+    position: relative;
+    color: #2e363e;
+}
+
+.nav__notification {
+    position: absolute; /*쓰기 위한 조건 : 부모가 position:relative*/
+    left: 15px;
+    bottom: 15px;
+}
+
+.nav__notificationDot {
+    background-color: rgb(252, 78, 78);
+    width: 8px;
+    height: 8px;
+    border-radius: 5px;
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+}
