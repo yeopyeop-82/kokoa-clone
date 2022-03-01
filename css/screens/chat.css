@@ -1,0 +1,197 @@
+#chat-screen {
+    background-color: #abc1d1;
+    height: 2000vh;
+}
+
+#chat-screen .alt-header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box; /*요거 뭐지 찾아보기 */
+    background-color: #abc1d1;
+    opacity: 0.9;
+    z-index: 1;
+}
+
+#chat-screen .status-bar {
+    background-color: #abc1d1;
+    z-index: 2; /* layer 같은 것! 숫자가 높을수록 앞으로 온다 */
+}
+
+.main-chat {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column; /*요소가 세로로 배치되어야 하기 때문!*/
+    align-items: center;
+}
+
+.chat__timestamp {
+    color: white;
+    background-color: #92a4b2;
+    padding: 12px;
+    border-radius: 24px;
+    margin-bottom: 25px;;
+}
+
+@keyframes appearMessage {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes appearOwnMessage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.message-row {
+    width: 100%;
+    display: flex;
+    margin-bottom: 25px;
+    animation: appearMessage 1s ease-in-out forwards;
+}
+
+.message-row img {
+    width: 50px;
+    height: 50px;
+    border-radius: 40%;
+    margin-right: 10px;
+}
+
+.message__author {
+    opacity: 0.8;
+    font-size: 16px;
+    margin-bottom: 7px;
+    display: block; /* span은 inline이여서 margin이 적용되지 않기 때문*/
+}
+
+.message__bubble {
+    background-color: white;
+    padding: 13px;
+    border-radius: 15px;
+    border-top-left-radius: 0px; /*말풍선 같아보이게...*/
+    font-size: 20px;
+}
+
+.message__info {
+    display: flex;
+    align-items: flex-end;
+}
+
+.message__time {
+    opacity: 0.8;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.message-row--own {
+    transform: translateX(30px);
+    opacity: 0;
+    justify-content: flex-end;
+    animation: appearOwnMessage 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.message-row--own .message__bubble {
+    background-color: var(--yellow);
+    border-top-right-radius: 0px;
+    border-top-left-radius: 15px;
+    margin-right: 0px;
+    margin-left: 5px;
+}
+
+.message-row--own .message__info {
+    flex-direction: row-reverse;  /*순서 바꾸기! html 코드를 만지지 않고도...*/
+}
+
+.reply {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 25px;
+    box-sizing: border-box;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.reply .reply__column:first-child {
+    width: 10%;
+}
+
+.reply__column:last-child {
+    width: 90%;
+    position: relative;
+}
+
+.reply input {
+    height: 30px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+    position: absolute;
+    right: 0;
+    top: 3px;
+    right: -8px;
+}
+
+.reply__column:last-child > i {
+    right: 40px;
+    top: 20px; /* absolute 기 때문에 일일이 값을 넣어서 봐줘야 함*/
+}
+
+.reply__column button {
+    background-color: var(--yellow);
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.reply i {
+    opacity: 0.5;
+}
+
+.reply__column button i {
+    opacity: 1;
+}
+
+.reply .reply__column:first-child
+.reply .reply__column .fa-face-laugh,
+.reply button {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child
+.reply:focus-within .fa-face-laugh,
+.reply:focus-within button {
+    /*reply 내부에 어떤 elements가 focus 되어 있을떄 ! */
+    opacity: 0;
+}
+
+.reply:focus-within input {
+    width: 88vw;
+    transform: translateX(-10%) translateY(-80px);
+}
+
+.reply:focus-within {
+    transform: translateY(80px);
+}

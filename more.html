@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to kokoa Talk</title>
+    <title>More</title>
 </head>
 <body>
     <div class="status-bar">
@@ -24,57 +24,69 @@
     </div>
 
     <header class="screen-header">
-        <h1 class="screen-header__title">Friends</h1>
+        <h1 class="screen-header__title">More</h1>
         <div class="screen-header__icons">
             <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
             <span><i class="fa-solid fa-music fa-lg"></i></span>
+            <span>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gears fa-lg"></i>
+                </a>
+            </span>
         </div>
     </header>
 
-    <a id="friends" href="#">
-        <span><i class="fa-solid fa-circle-info"></i></span>
-        <span>Friends' Names Display</span>
-        <span><i class="fa-solid fa-angle-right"></i></span>
-    </a>
-
-    <main class="friends-screen">
+    <main class="main-screen more-screen">
         <div class="user-component">
             <div class="user-component__column">
                 <img src="Screenshot/yeop.jpg" class="user-component__avatar" />
                 <div class="user-component__text">
                     <h4 class="user-component__title">Yeop</h4>
-                    <!-- <h6 class="user-component__subtitle">whatever!</h6> --> 
+                    <h6 class="user-component__subtitle">+82 10-1234-5678
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </h6>
                 </div>
             </div>
-            <div class="user-component__column"></div>
-        </div>
-        <div class="friends-screen__channel">
-            <div class="friends-screen__channel-header">
-                <span>Channel</span>
-                <i class="fa-solid fa-chevron-up"></i>
+            <div class="user-component__column">
+                <i class="fa-solid fa-message fa-2x"></i>
             </div>
-            <div class="user-component">
-                    <div class="user-component__column">
-                        <img src="Screenshot/yeop.jpg" 
-                        class="user-component__avatar user-component__avatar--sm" />
-                        <div class="user-component__text">
-                            <h4 class="user-component__title user-component__title--not-bold">
-                                Channel
-                            </h4>
-                            <!-- <h6 class="user-component__subtitle">whatever!</h6> --> 
-                        </div>
+        </div>
+        <div class="icon-row">
+            <div class="icon-row__icon">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Calender</span>
+            </div>
+            <div class="icon-row__icon">
+                <i class="fa-solid fa-hard-drive"></i>
+                <span>Talk Drive</span>
+            </div>
+            <div class="icon-row__icon">
+                <i class="fa-solid fa-face-grin"></i>
+                <span>Emoticons</span>
+            </div>
+            <div class="icon-row__icon">
+                <i class="fa-solid fa-brush"></i>
+                <span>Themes</span>
+            </div>
+        </div>
+        <div class="more-suggestions">
+            <h4 class="more-suggestions__title">Suggestions</h4>
+            <div class="more-suggestions__icons">
+                <div class="more-suggestions__icon">
+                    <div class="more-suggestions__icon-image">
+                        <i class="fa-solid fa-quote-right"></i>
                     </div>
-                    <div class="user-component__column">
-                        <div>
-                            <span>2</span>
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </div>
+                    <span class="more-suggestions__icon-text">Kokoa Story</span>
+                </div>
+                <div class="more-suggestions__icon">
+                    <div class="more-suggestions__icon-image">
+                        <i class="fa-solid fa-quote-right"></i>
                     </div>
+                    <span class="more-suggestions__icon-text">Kokoa Story</span>
+                </div>
             </div>
         </div>
     </main>
-
-   
 
     <nav class="nav">
         <ul class="nav__list">
@@ -98,10 +110,6 @@
             </li>
         </ul>
     </nav>
-
-    <div id="splash-screen">
-        <i class="fa-solid fa-comment fa-2x"></i>
-    </div>
 
     <div id="no-mobile">
         <span>Your screen is too bigㅜㅜ</span>

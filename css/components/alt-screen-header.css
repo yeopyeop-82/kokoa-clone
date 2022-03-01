@@ -1,0 +1,28 @@
+.alt-header {
+    padding: 50px 25px 25px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alt-header__title {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.alt-header__column span:last-child {
+    margin-left: 20px;
+}
+
+.alt-header__column {
+    width: 33%; /*중앙정렬을 하는 일종의 hack !*/
+}
+
+.alt-header__column:last-child {
+    display: flex;
+    justify-content: flex-end; /*중앙정렬을 하는 일종의 hack !*/
+}
+
+.alt-header__column:nth-child(2) {
+    text-align: center;  /*중앙정렬을 하는 일종의 hack !*/
+}
